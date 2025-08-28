@@ -1,0 +1,190 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+
+.app-header {
+  background: #4f46e5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.app-container {
+  padding: 1.5rem;
+}
+
+.app-layout {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 220px; /* same as sidebar width */
+  padding: 2rem;
+  flex: 1;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+ /* Dark mode  */
+
+
+ /* Default Light Theme */
+:root[data-theme="light"] {
+  --bg: #f8f9fa;
+  --text: #222;
+  --sidebar-bg: #fff;
+  --sidebar-border: #ddd;
+  --link-active: #4f46e5;
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+  --bg: #181818;
+  --text: #f1f1f1;
+  --sidebar-bg: #202020;
+  --sidebar-border: #333;
+  --link-active: #6366f1;
+}
+
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-layout {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 2rem;
+  flex: 1;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--link-active);
+}
+
+.nav-link {
+  display: block;
+  padding: 0.7rem 1rem;
+  margin: 0.3rem 0;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-link.active {
+  background: var(--link-active);
+  color: white;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  margin-top: auto;
+  padding: 1rem 0;
+}
+
+.theme-toggle button {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--link-active);
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.theme-toggle button:hover {
+  opacity: 0.9;
+}
+
+/* HabitsCSS */
+
+.habit-form {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.habit-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.habit-form button {
+  background: var(--link-active);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.habit-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--sidebar-bg);
+  color: var(--text);
+  border: 1px solid var(--sidebar-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.habit-actions button {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.habit-actions button:first-child {
+  background: #22c55e;
+  color: white;
+}
+
+.habit-actions button:last-child {
+  background: #ef4444;
+  color: white;
+}
